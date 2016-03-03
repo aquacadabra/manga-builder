@@ -1,0 +1,24 @@
+<html>
+	<head></head>
+	<body>
+		<style>			
+			h2{
+				text-align: center;
+			}
+			ul{
+				padding: 0;
+			}
+			li{
+				text-align: center;
+				list-style-type: none;
+				margin-bottom: 10px;
+			}			
+		</style>
+		<h2>{{.Title}}</h2>
+		<ul>
+			{{ range $key, $val := .Chapters }}
+			<li><a href="pages/{{$val}}.html">Chapter {{$val}}</a></li>		
+			{{end}}
+		</ul>
+	</body>
+</html>
